@@ -1,0 +1,114 @@
+:root {
+  --bg: #0f1621;
+  --surface: #121a27;
+  --text: #e7ecf3; /* neutral light */
+  --muted: #98a2b3; /* neutral muted */
+  --brand: #facc15; /* warm yellow */
+  --accent: #6b7280; /* nav muted */
+  --card: #0f172a;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.site-header { background: #0b111b; border-bottom: 1px solid rgba(255,255,255,0.06); position: sticky; top: 0; z-index: 10; }
+.site-bar { max-width: 1180px; margin: 0 auto; padding: 18px 24px; display: flex; gap: 16px; align-items: center; }
+.brand { font-weight: 900; letter-spacing: 0.2px; font-size: 20px; }
+.brand-dot { color: var(--brand); }
+.brand-highlight { color: var(--brand); }
+.topnav { margin-left: auto; display: flex; gap: 24px; }
+.topnav a { color: var(--accent); text-decoration: none; font-weight: 700; font-size: 14px; letter-spacing: 0.5px; }
+.topnav a:hover, .topnav a.active { color: var(--text); }
+
+.container { max-width: 1180px; margin: 0 auto; padding: 48px 24px; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: 1fr 520px; gap: 48px; align-items: center; padding: 64px 0; }
+.eyebrow { color: var(--brand); font-weight: 800; margin-bottom: 16px; }
+.hero-title { font-size: clamp(32px, 6vw, 56px); line-height: 1.1; margin: 0 0 16px; }
+.hero-text { color: var(--muted); margin: 0 0 24px; max-width: 56ch; }
+.cta-btn { background: var(--brand); color: #111827; border: none; padding: 12px 18px; border-radius: 10px; font-weight: 800; cursor: pointer; }
+.cta-btn:hover { filter: brightness(0.95); }
+.hero-photo-frame { background: var(--surface); border-radius: 24px; padding: 28px; box-shadow: 0 24px 60px rgba(0,0,0,0.35); outline: 2px solid var(--brand); outline-offset: -12px; }
+.hero-photo { display: block; width: 100%; height: auto; border-radius: 14px; }
+
+.footer { text-align: center; color: var(--muted); margin: 28px 0 8px; }
+
+/* Education Section */
+.education-item {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 48px;
+  padding: 24px;
+  background: var(--card);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.education-content {
+  flex: 1;
+}
+
+.education-content h3 {
+  color: var(--brand);
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+}
+
+.degree {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 4px 0;
+}
+
+.gpa, .dates {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 8px 0;
+}
+
+.description {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 12px 0 0 0;
+}
+
+.education-image {
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid var(--brand);
+}
+
+/* Responsive design for education section */
+@media (max-width: 768px) {
+  .education-item {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .education-image {
+    width: 100%;
+    height: 150px;
+  }
+}
+
+
